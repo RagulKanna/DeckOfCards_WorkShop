@@ -1,12 +1,16 @@
 package Workshop.DeckOfCards;
 
+import java.util.Scanner;
+
 public class InitializeCards {
 
         public static String[] suit={"Clubs","Diamonds", "Hearts", "Spades"};
         public static String[] rank={"2", "3", "4", "5", "6", "7", "8", "9", "10","Jack", "Queen", "King", "Ace"};
         public static int CARDS=9;
-        public static int PLAYERS=4;
+        public static int PLAYERS;
+        public static int[] Players=new int[PLAYERS];
         public static String[][] cardposition=new String[4][13];
+        public static Scanner sc =new Scanner(System.in);
 
     public static void distribute() {
         for (int i = 0; i < suit.length; i++) {
@@ -29,6 +33,12 @@ public class InitializeCards {
             }
         }
     }
+
+    public static void createplayers(){
+        System.out.println("\nEnter how many player you need:");
+        PLAYERS=sc.nextInt();
+        System.out.println("Created "+PLAYERS+" players");
+            }
 }
 
 
