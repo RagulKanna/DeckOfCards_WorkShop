@@ -1,7 +1,6 @@
 package Workshop.DeckOfCards;
 
 
-import java.net.PortUnreachableException;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -15,6 +14,7 @@ public class InitializeCards {
     public static int CLUB_COUNT = 0, DIAMOND_COUNT = 0, HEARTS_COUNT = 0, SPADES_COUNT = 0;
     public static int[] Cardcount;
     public static ArrayList cards = new ArrayList();
+    public static ArrayList<String> array = new ArrayList<String>();
     public static int[] numbers = new int[53];
     public static int count = 0;
     public static int[] countcardtype = new int[4];
@@ -30,15 +30,8 @@ public class InitializeCards {
 
             }
         }
-        print();
     }
 
-    public static void print() {
-        System.out.println("\nThe list of cards:");
-        for (int i = 0; i < 52; i++) {
-            System.out.println(cards.get(i));
-        }
-    }
 
     public static void createplayers() {
         System.out.println("\nEnter how many player you need:");
@@ -64,10 +57,11 @@ public class InitializeCards {
                             count++;
                         }
                     }
-                    System.out.println("\n\n The 1st Player's card :");
-                    linkedlist1.print();
                     checkcards();
                     linkedlist1.cardtypecount();
+                    linkedlist1.sort();
+                    System.out.println("\n\n The 1st Player's card :");
+                    linkedlist1.print();
                     printcardtype();
                     break;
                 }
@@ -84,10 +78,11 @@ public class InitializeCards {
                             count++;
                         }
                     }
-                    System.out.println("\n\n The 2st Player's card :");
-                    linkedlist2.print();
                     checkcards();
                     linkedlist2.cardtypecount();
+                    linkedlist2.sort();
+                    System.out.println("\n\n The 2st Player's card :");
+                    linkedlist2.print();
                     printcardtype();
                     break;
                 }
@@ -104,10 +99,11 @@ public class InitializeCards {
                             count++;
                         }
                     }
-                    System.out.println("\n\n The 3rd Player's card :");
-                    linkedlist3.print();
                     checkcards();
                     linkedlist3.cardtypecount();
+                    linkedlist3.sort();
+                    System.out.println("\n\n The 3rd Player's card :");
+                    linkedlist3.print();
                     printcardtype();
                     break;
                 }
@@ -124,9 +120,10 @@ public class InitializeCards {
                             count++;
                         }
                     }
+                    checkcards();
+                    linkedlist4.sort();
                     System.out.println("\n\n The 4rd Player's card :");
                     linkedlist4.print();
-                    checkcards();
                     linkedlist4.cardtypecount();
                     printcardtype();
                     break;
@@ -144,6 +141,10 @@ public class InitializeCards {
         for (int i = 0; i < 4; i++) {
             System.out.println(suit[i] + ": " + countcardtype[i]);
         }
+        CLUB_COUNT=0;
+        DIAMOND_COUNT=0;
+        HEARTS_COUNT=0;
+        SPADES_COUNT=0;
     }
 
     private static void checkcards() {

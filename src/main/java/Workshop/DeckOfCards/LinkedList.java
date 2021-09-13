@@ -1,5 +1,6 @@
 package Workshop.DeckOfCards;
 
+
 public class LinkedList {
     Node head;
     Node tail;
@@ -24,7 +25,7 @@ public class LinkedList {
             return;
         } else {
             Node tempNode = head;
-            System.out.println("\n");
+            System.out.println("\n player's card in list:");
             while (tempNode != null) {
                 if (tempNode.next != null) {
                     System.out.print(tempNode.data + "->");
@@ -84,6 +85,22 @@ public class LinkedList {
                 }
                 temp = temp.next;
             }
+        }
+    }
+
+    public void sort() {
+        Node first = head, second = null;
+        while (first != null) {
+            second = first.next;
+            while (second != null) {
+                if (first.data.compareTo(second.data) > 0) {
+                    String temp = first.data;
+                    first.data = second.data;
+                    second.data = temp;
+                }
+                second = second.next;
+            }
+            first = first.next;
         }
     }
 }
