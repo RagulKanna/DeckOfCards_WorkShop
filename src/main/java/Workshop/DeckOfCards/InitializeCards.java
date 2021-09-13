@@ -34,11 +34,19 @@ public class InitializeCards {
         }
     }
 
-    public static void createplayers(){
+    public static void createplayers() {
         System.out.println("\nEnter how many player you need:");
-        PLAYERS=sc.nextInt();
-        System.out.println("Created "+PLAYERS+" players");
+        PLAYERS = sc.nextInt();
+        System.out.println("Created " + PLAYERS + " players");
+    }
+
+    public static void distributecard() {
+        for (int i = 0; i < CARDS; i++) {
+            for (int j = 0; j < PLAYERS; j++) {
+
             }
+        }
+    }
 }
 
 
