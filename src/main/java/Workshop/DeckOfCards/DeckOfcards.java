@@ -6,5 +6,6 @@ public class DeckOfcards extends InitializeCards {
         distribute();
         createplayers();
         distributecard();
+        shufflecards();
     }
 }
