@@ -37,4 +37,53 @@ public class LinkedList {
         }
 
     }
+
+    public void cardtypecount() {
+
+        String card, checkcard;
+        for (int i = 0; i < 13; i++) {
+            card = (String) InitializeCards.cards.get(i);
+            Node temp = head;
+            for (int j = 0; j < 9; j++) {
+                checkcard = temp.data;
+                if (checkcard.equals(card)) {
+                    InitializeCards.CLUB_COUNT = InitializeCards.CLUB_COUNT + 1;
+                }
+                temp = temp.next;
+            }
+        }
+        for (int i = 13; i < 26; i++) {
+            card = (String) InitializeCards.cards.get(i);
+            Node temp = head;
+            for (int j = 0; j < 9; j++) {
+                checkcard = temp.data;
+                if (checkcard.equals(card)) {
+                    InitializeCards.DIAMOND_COUNT = InitializeCards.DIAMOND_COUNT + 1;
+                }
+                temp = temp.next;
+            }
+        }
+        for (int i = 26; i < 39; i++) {
+            card = (String) InitializeCards.cards.get(i);
+            Node temp = head;
+            for (int j = 0; j < 9; j++) {
+                checkcard = temp.data;
+                if (checkcard.equals(card)) {
+                    InitializeCards.HEARTS_COUNT = InitializeCards.HEARTS_COUNT + 1;
+                }
+                temp = temp.next;
+            }
+        }
+        for (int i = 39; i < 51; i++) {
+            card = (String) InitializeCards.cards.get(i);
+            Node temp = head;
+            for (int j = 0; j < 9; j++) {
+                checkcard = temp.data;
+                if (checkcard.equals(card)) {
+                    InitializeCards.SPADES_COUNT = InitializeCards.SPADES_COUNT + 1;
+                }
+                temp = temp.next;
+            }
+        }
+    }
 }
