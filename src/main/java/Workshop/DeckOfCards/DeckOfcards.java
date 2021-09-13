@@ -3,9 +3,8 @@ package Workshop.DeckOfCards;
 
 public class DeckOfcards extends InitializeCards {
     public static void main(String[] args) {
-        distribute();
+        cardsdistribution();
         createplayers();
         distributecard();
-        shufflecards();
     }
 }

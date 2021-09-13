@@ -2,11 +2,13 @@ package Workshop.DeckOfCards;
 
 public class Node {
 
-    int data;
-    Node next;
+    public String data;
+    public Node next;
 
-    Node(int data){
-        this.data=data;
-        this.next=null;
+
+    public Node(String data) {
+        this.data = data;
+        this.next = null;
     }
+
 }
