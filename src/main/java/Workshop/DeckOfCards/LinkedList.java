@@ -102,5 +102,89 @@ public class LinkedList {
             }
             first = first.next;
         }
+        Node tempf = head, temps = null;
+        temps = tempf.next;
+        while (temps != null) {
+            if ((tempf.data.equals("Clubs-Ace") && (temps.data.equals("Clubs-King") || temps.data.equals("Clubs-Queen") || temps.data.equals("Clubs-Jack")))) {
+                String temp = tempf.data;
+                tempf.data = temps.data;
+                temps.data = temp;
+                temps = temps.next;
+                tempf = tempf.next;
+            } else if (tempf.data.equals("Clubs-King") && temps.data.equals("Clubs-Queen")) {
+                String temp = tempf.data;
+                tempf.data = temps.data;
+                temps.data = temp;
+                temps = temps.next;
+                tempf = tempf.next;
+            } else {
+                temps = temps.next;
+                tempf = tempf.next;
+            }
+        }
+        tempf = head;
+        temps = null;
+        temps = tempf.next;
+        while (temps != null) {
+            if ((tempf.data.equals("Diamonds-Ace") && (temps.data.equals("Diamonds-King") || temps.data.equals("Diamonds-Queen") || temps.data.equals("Diamonds-Jack")))) {
+                String temp = tempf.data;
+                tempf.data = temps.data;
+                temps.data = temp;
+                temps = temps.next;
+                tempf = tempf.next;
+            } else if (tempf.data.equals("Diamonds-King") && temps.data.equals("Diamonds-Queen")) {
+                String temp = tempf.data;
+                tempf.data = temps.data;
+                temps.data = temp;
+                temps = temps.next;
+                tempf = tempf.next;
+            } else {
+                temps = temps.next;
+                tempf = tempf.next;
+            }
+        }
+        tempf = head;
+        temps = null;
+        temps = tempf.next;
+        while (temps != null) {
+            if ((tempf.data.equals("Hearts-Ace") && (temps.data.equals("Hearts-King") || temps.data.equals("Hearts-Queen") || temps.data.equals("Hearts-Jack")))) {
+                String temp = tempf.data;
+                tempf.data = temps.data;
+                temps.data = temp;
+                temps = temps.next;
+                tempf = tempf.next;
+            } else if (tempf.data.equals("Hearts-King") && temps.data.equals("Hearts-Queen")) {
+                String temp = tempf.data;
+                tempf.data = temps.data;
+                temps.data = temp;
+                temps = temps.next;
+                tempf = tempf.next;
+            } else {
+                temps = temps.next;
+                tempf = tempf.next;
+            }
+        }
+        tempf = head;
+        temps = null;
+        temps = tempf.next;
+        while (temps != null) {
+            if ((tempf.data.equals("Spades-Ace") && (temps.data.equals("Spades-King") || temps.data.equals("Spades-Queen") || temps.data.equals("Spades-Jack")))) {
+
+                String temp = tempf.data;
+                tempf.data = temps.data;
+                temps.data = temp;
+                temps = temps.next;
+                tempf = tempf.next;
+            } else if (tempf.data.equals("Spades-King") && temps.data.equals("Spades-Queen")) {
+                String temp = tempf.data;
+                tempf.data = temps.data;
+                temps.data = temp;
+                temps = temps.next;
+                tempf = tempf.next;
+            } else {
+                temps = temps.next;
+                tempf = tempf.next;
+            }
+        }
     }
 }

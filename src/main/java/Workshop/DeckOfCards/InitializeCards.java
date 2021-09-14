@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class InitializeCards {
 
     public static String[] suit = {"Clubs", "Diamonds", "Hearts", "Spades"};
-    public static String[] rank = {"-2", "-3", "-4", "-5", "-6", "-7", "-8", "-9", "-10", "-Jack", "-Queen", "-King", "-Ace"};
+    public static String[] rank = {"-02", "-03", "-04", "-05", "-06", "-07", "-08", "-09", "-10", "-Jack", "-Queen", "-King", "-Ace"};
     public static int CARDS = 9;
     public static int PLAYERS;
     public static int CLUB_COUNT = 0, DIAMOND_COUNT = 0, HEARTS_COUNT = 0, SPADES_COUNT = 0;
@@ -36,6 +36,10 @@ public class InitializeCards {
     public static void createplayers() {
         System.out.println("\nEnter how many player you need:");
         PLAYERS = sc.nextInt();
+        do {
+            System.out.println("\n You can add 2 to 4 players only");
+            PLAYERS = sc.nextInt();
+        } while (PLAYERS == 0 || PLAYERS > 4);
         System.out.println("Created " + PLAYERS + " players");
     }
 
@@ -141,10 +145,10 @@ public class InitializeCards {
         for (int i = 0; i < 4; i++) {
             System.out.println(suit[i] + ": " + countcardtype[i]);
         }
-        CLUB_COUNT=0;
-        DIAMOND_COUNT=0;
-        HEARTS_COUNT=0;
-        SPADES_COUNT=0;
+        CLUB_COUNT = 0;
+        DIAMOND_COUNT = 0;
+        HEARTS_COUNT = 0;
+        SPADES_COUNT = 0;
     }
 
     private static void checkcards() {
